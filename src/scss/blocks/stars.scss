@@ -1,0 +1,73 @@
+.stars {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
+  &:first-child {
+    background-image: url("../img/big-stars.png");
+    animation: big-bg 2s linear;
+
+    @keyframes big-bg {
+      0% {
+        top: 30px;
+        left: 30px;
+      }
+      100% {
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &:nth-child(2){
+    background-image: url("../img/average-stars.png");
+    animation: av-bg 2s linear;
+
+    @keyframes av-bg {
+      0% {
+        top: 30px;
+        right: 30px;
+      }
+      100% {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  &:last-child {
+    background-image: url("../img/little-stars.png");
+    animation: lt-bg 2s linear;
+
+    @keyframes lt-bg {
+      0% {
+        top: -30px;
+        left: -30px;
+      }
+      100% {
+        top: 0px;
+        left: 0;
+      }
+    }
+  }
+
+  @media (max-width: $screen-sm){
+    &:first-child {
+      animation: none;
+    }
+
+    &:nth-child(2) {
+      animation: none;
+    }
+
+    &:last-child {
+      animation: none;
+    }
+  }
+}
+
+
+
+
