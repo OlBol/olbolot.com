@@ -9,43 +9,23 @@
   &__link {
     text-decoration: none;
     display: block;
-    margin: 20px;
-    border: 2px solid #fff;
+    margin: 10px;
+    border: 1px solid #fff;
     border-radius: 100%;
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     text-align: center;
     position: relative;
-    animation: icons 3s linear;
+    box-shadow: 0 0 20px 0 yellow;
+    animation: hid 3s linear;
 
-    @keyframes icons {
-      0%{
+    @keyframes hid {
+      10% {
         opacity: 0;
-      };
-      20% {
-        opacity: 0.2;
-        box-shadow: 0 0 30px 0 yellow;
-      };
-      30% {
-        opacity: 0.4;
-      };
-      65% {
-        opacity: 1;
-        box-shadow: 0 0 50px 0 yellow;
-      };
-      100% {
-        opacity: 1;
-        box-shadow: none;
       }
-    }
-
-    &:hover{
-      color: yellow;
-      box-shadow: 0 0 50px 0 yellow;
-    }
-
-    &:hover .social__icon{
-      color: yellow;
+      to {
+        opacity: 1;
+      }
     }
   }
 
@@ -55,23 +35,25 @@
     font-weight: normal;
     font-weight: normal;
     color: #fff;
-    font-size: 32px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
 
     &--gmail{
-      font-size: 28px;
+      font-size: 14px;
     }
   }
 
-  @media (max-width: $screen-md) {
+  @media (min-width: $screen-sm) {
     &__link {
       margin: 15px;
       border: 1.5px solid #fff;
       height: 70px;
       width: 70px;
+      box-shadow: none;
+      animation: icons 3s linear;
 
       @keyframes icons {
         20% {
@@ -80,9 +62,15 @@
         65% {
           box-shadow: 0 0 30px 0 yellow;
         }
-    }
+      }
+
       &:hover{
+        color: yellow;
         box-shadow: 0 0 30px 0 yellow;
+      }
+
+      &:hover .social__icon{
+        color: yellow;
       }
     }
 
@@ -95,32 +83,44 @@
     }
   }
 
-  @media (max-width: $screen-sm) {
+  @media (min-width: $screen-md) {
     &__link {
-      margin: 10px;
-      border: 1px solid #fff;
-      height: 50px;
-      width: 50px;
-      box-shadow: 0 0 20px 0 yellow;
-      animation: hid 3s linear;
+      margin: 20px;
+      border: 2px solid #fff;
+      height: 100px;
+      width: 100px;
 
-      @keyframes hid {
-        10% {
+      @keyframes icons {
+        0%{
           opacity: 0;
-        }
-        to {
+        };
+        20% {
+          opacity: 0.2;
+          box-shadow: 0 0 30px 0 yellow;
+        };
+        30% {
+          opacity: 0.4;
+        };
+        65% {
           opacity: 1;
+          box-shadow: 0 0 50px 0 yellow;
+        };
+        100% {
+          opacity: 1;
+          box-shadow: none;
         }
       }
+
       &:hover{
-        box-shadow: 0 0 20px 0 yellow;
+        box-shadow: 0 0 50px 0 yellow;
       }
     }
+
     &__icon{
-      font-size: 16px;
+      font-size: 32px;
 
       &--gmail {
-        font-size: 14px;
+        font-size: 28px;
       }
     }
   }

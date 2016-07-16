@@ -446,97 +446,85 @@ body {
 }
 .stars:first-child {
     background-image : url('../img/big-stars.png');
-    -webkit-animation : big-bg 2s linear;
-            animation : big-bg 2s linear;
-}
-
-@-webkit-keyframes big-bg {
-    0% {
-        top : 30px;
-        left : 30px;
-    }
-    100% {
-        top : 0;
-        left : 0;
-    }
-}
-
-@keyframes big-bg {
-    0% {
-        top : 30px;
-        left : 30px;
-    }
-    100% {
-        top : 0;
-        left : 0;
-    }
 }
 .stars:nth-child(2) {
     background-image : url('../img/average-stars.png');
-    -webkit-animation : av-bg 2s linear;
-            animation : av-bg 2s linear;
-}
-
-@-webkit-keyframes av-bg {
-    0% {
-        top : 30px;
-        right : 30px;
-    }
-    100% {
-        top : 0;
-        right : 0;
-    }
-}
-
-@keyframes av-bg {
-    0% {
-        top : 30px;
-        right : 30px;
-    }
-    100% {
-        top : 0;
-        right : 0;
-    }
 }
 .stars:last-child {
     background-image : url('../img/little-stars.png');
-    -webkit-animation : lt-bg 2s linear;
-            animation : lt-bg 2s linear;
 }
-
-@-webkit-keyframes lt-bg {
-    0% {
-        top : -30px;
-        left : -30px;
-    }
-    100% {
-        top : 0;
-        left : 0;
-    }
-}
-
-@keyframes lt-bg {
-    0% {
-        top : -30px;
-        left : -30px;
-    }
-    100% {
-        top : 0;
-        left : 0;
-    }
-}
-@media (max-width: 480px) {
+@media (min-width: 480px) {
     .stars:first-child {
-        -webkit-animation : none;
-                animation : none;
+        -webkit-animation : big-bg 2s linear;
+                animation : big-bg 2s linear;
+    }
+    @-webkit-keyframes big-bg {
+        0% {
+            top : 30px;
+            left : 30px;
+        }
+        100% {
+            top : 0;
+            left : 0;
+        }
+    }
+    @keyframes big-bg {
+        0% {
+            top : 30px;
+            left : 30px;
+        }
+        100% {
+            top : 0;
+            left : 0;
+        }
     }
     .stars:nth-child(2) {
-        -webkit-animation : none;
-                animation : none;
+        -webkit-animation : av-bg 2s linear;
+                animation : av-bg 2s linear;
+    }
+    @-webkit-keyframes av-bg {
+        0% {
+            top : 30px;
+            right : 30px;
+        }
+        100% {
+            top : 0;
+            right : 0;
+        }
+    }
+    @keyframes av-bg {
+        0% {
+            top : 30px;
+            right : 30px;
+        }
+        100% {
+            top : 0;
+            right : 0;
+        }
     }
     .stars:last-child {
-        -webkit-animation : none;
-                animation : none;
+        -webkit-animation : lt-bg 2s linear;
+                animation : lt-bg 2s linear;
+    }
+    @-webkit-keyframes lt-bg {
+        0% {
+            top : -30px;
+            left : -30px;
+        }
+        100% {
+            top : 0;
+            left : 0;
+        }
+    }
+    @keyframes lt-bg {
+        0% {
+            top : -30px;
+            left : -30px;
+        }
+        100% {
+            top : 0;
+            left : 0;
+        }
     }
 }
 
@@ -544,35 +532,35 @@ body {
     color : #fff;
     text-align : center;
     font-weight : bold;
-    font-size : 40px;
+    font-size : 25px;
 }
 .page-header__name {
-    font-size : 100px;
+    font-size : 50px;
     color : #000;
-    text-shadow : -2px -2px 10px yellow, 2px -2px 10px yellow, -2px 2px 10px yellow, 2px 2px 10px yellow;
+    text-shadow : -1.5px -1.5px 10px yellow, 1.5px -1.5px 10px yellow, -1.5px 1.5px 10px yellow, 1.5px 1.5px 10px yellow;
     opacity : .5;
 }
 .page-header__prof {
     color : #fff;
-    font-size : 50px;
+    font-size : 30px;
     margin-top : 15px;
 }
-@media (max-width: 768px) {
+@media (min-width: 480px) {
     .page-header__name {
         font-size : 70px;
         text-shadow : -1.5px -1.5px 10px yellow, 1.5px -1.5px 10px yellow, -1.5px 1.5px 10px yellow, 1.5px 1.5px 10px yellow;
     }
     .page-header__prof {
-        font-size : 35px;
+        font-size : 40px;
     }
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
     .page-header__name {
-        font-size : 50px;
-        text-shadow : -1.5px -1.5px 10px yellow, 1.5px -1.5px 10px yellow, -1.5px 1.5px 10px yellow, 1.5px 1.5px 10px yellow;
+        font-size : 100px;
+        text-shadow : -2px -2px 10px yellow, 2px -2px 10px yellow, -2px 2px 10px yellow, 2px 2px 10px yellow;
     }
     .page-header__prof {
-        font-size : 25px;
+        font-size : 50px;
     }
 }
 
@@ -590,64 +578,34 @@ body {
 .social__link {
     text-decoration : none;
     display : block;
-    margin : 20px;
-    border : 2px solid #fff;
+    margin : 10px;
+    border : 1px solid #fff;
     border-radius : 100%;
-    height : 100px;
-    width : 100px;
+    height : 50px;
+    width : 50px;
     text-align : center;
     position : relative;
-    -webkit-animation : icons 3s linear;
-            animation : icons 3s linear;
+    box-shadow : 0 0 20px 0 yellow;
+    -webkit-animation : hid 3s linear;
+            animation : hid 3s linear;
 }
 
-@-webkit-keyframes icons {
-    0% {
+@-webkit-keyframes hid {
+    10% {
         opacity : 0;
     }
-    20% {
-        opacity : .2;
-        box-shadow : 0 0 30px 0 yellow;
-    }
-    30% {
-        opacity : .4;
-    }
-    65% {
+    to {
         opacity : 1;
-        box-shadow : 0 0 50px 0 yellow;
-    }
-    100% {
-        opacity : 1;
-        box-shadow : none;
     }
 }
 
-@keyframes icons {
-    0% {
+@keyframes hid {
+    10% {
         opacity : 0;
     }
-    20% {
-        opacity : .2;
-        box-shadow : 0 0 30px 0 yellow;
-    }
-    30% {
-        opacity : .4;
-    }
-    65% {
+    to {
         opacity : 1;
-        box-shadow : 0 0 50px 0 yellow;
     }
-    100% {
-        opacity : 1;
-        box-shadow : none;
-    }
-}
-.social__link:hover {
-    color : yellow;
-    box-shadow : 0 0 50px 0 yellow;
-}
-.social__link:hover .social__icon {
-    color : yellow;
 }
 .social__icon {
     font-family : 'icons';
@@ -655,7 +613,7 @@ body {
     font-weight : normal;
     font-weight : normal;
     color : #fff;
-    font-size : 32px;
+    font-size : 16px;
     position : absolute;
     top : 50%;
     right : 50%;
@@ -663,14 +621,17 @@ body {
             transform : translate(50%, -50%);
 }
 .social__icon--gmail {
-    font-size : 28px;
+    font-size : 14px;
 }
-@media (max-width: 768px) {
+@media (min-width: 480px) {
     .social__link {
         margin : 15px;
         border : 1.5px solid #fff;
         height : 70px;
         width : 70px;
+        box-shadow : none;
+        -webkit-animation : icons 3s linear;
+                animation : icons 3s linear;
     }
     @-webkit-keyframes icons {
         20% {
@@ -689,7 +650,11 @@ body {
         }
     }
     .social__link:hover {
+        color : yellow;
         box-shadow : 0 0 30px 0 yellow;
+    }
+    .social__link:hover .social__icon {
+        color : yellow;
     }
     .social__icon {
         font-size : 22px;
@@ -698,40 +663,61 @@ body {
         font-size : 19px;
     }
 }
-@media (max-width: 480px) {
+@media (min-width: 768px) {
     .social__link {
-        margin : 10px;
-        border : 1px solid #fff;
-        height : 50px;
-        width : 50px;
-        box-shadow : 0 0 20px 0 yellow;
-        -webkit-animation : hid 3s linear;
-                animation : hid 3s linear;
+        margin : 20px;
+        border : 2px solid #fff;
+        height : 100px;
+        width : 100px;
     }
-    @-webkit-keyframes hid {
-        10% {
+    @-webkit-keyframes icons {
+        0% {
             opacity : 0;
         }
-        to {
+        20% {
+            opacity : .2;
+            box-shadow : 0 0 30px 0 yellow;
+        }
+        30% {
+            opacity : .4;
+        }
+        65% {
             opacity : 1;
+            box-shadow : 0 0 50px 0 yellow;
+        }
+        100% {
+            opacity : 1;
+            box-shadow : none;
         }
     }
-    @keyframes hid {
-        10% {
+    @keyframes icons {
+        0% {
             opacity : 0;
         }
-        to {
+        20% {
+            opacity : .2;
+            box-shadow : 0 0 30px 0 yellow;
+        }
+        30% {
+            opacity : .4;
+        }
+        65% {
             opacity : 1;
+            box-shadow : 0 0 50px 0 yellow;
+        }
+        100% {
+            opacity : 1;
+            box-shadow : none;
         }
     }
     .social__link:hover {
-        box-shadow : 0 0 20px 0 yellow;
+        box-shadow : 0 0 50px 0 yellow;
     }
     .social__icon {
-        font-size : 16px;
+        font-size : 32px;
     }
     .social__icon--gmail {
-        font-size : 14px;
+        font-size : 28px;
     }
 }
 
