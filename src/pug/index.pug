@@ -1,32 +1,10 @@
 doctype
 html(lang='ru')
-	head
-		title Olga Bolotova
-		meta(charset='utf-8')
-		meta(name='viewport' content='width=device-width,initial-scale=1')
-		link(href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css')
-		link(href='css/style.min.css' rel='stylesheet')
+	include blocks/head
 	body
 		.container
-			.sky
-				.stars
-				.stars
-				.stars
-			header.page-header
-				h1.page-header__name Olga Bolotova
-				p.page-header__prof Front-End Developer
-			footer.page-footer
-				ul.social
-					li.social__item
-						a.social__link(href='https://github.com/OlBol')
-							i.social__icon.social__icon--github &#xe801;
-					li.social__item
-						a.social__link(href='https://vk.com/olbol')
-							i.social__icon.social__icon--vkontakte &#xe800;
-					li.social__item
-						a.social__link(href='https://ru.linkedin.com/in/olbol')
-							i.social__icon.social__icon--linkedin &#xe803;
-					li.social__item
-						a.social__link(href='mailto:olbolot@gmail.com')
-							i.social__icon.social__icon--gmail &#xe802;
+			include blocks/sky
+			include blocks/page-header
+			include blocks/page-footer
+		//script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js')
 		script(src='js/script.js')

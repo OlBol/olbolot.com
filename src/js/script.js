@@ -1,3 +1,4 @@
+// parallax
 'use strict'
 
 var layers = document.querySelectorAll('.stars');
