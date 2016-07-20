@@ -1,3 +1,12 @@
-var gulp = require('gulp');
+'use strict';
 
-gulp.task('default', ['watch'], function() {});
+var gulp = require('gulp'),
+    runSequence	= require('run-sequence');
+
+
+gulp.task('default', function() {
+    runSequence(
+        'build',
+        'server',
+        'watch');
+});

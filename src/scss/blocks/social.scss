@@ -35,10 +35,10 @@
     top: 50%;
     right: 50%;
     transform: translate(50%, -50%);
-    width: 30px;
+    width: 20px;
 
-      &--vk, &--gmail {
-        width: 20px;
+      &--linkedin {
+        width: 30px;
       }
   }
 
@@ -71,10 +71,10 @@
     }
 
     &__icon{
-      width: 44px;
+      width: 30px;
 
-      &--vk, &--gmail {
-        width: 30px;
+      &--linkedin {
+        width: 44px;
       }
     }
   }
@@ -113,10 +113,10 @@
     }
 
     &__icon{
-      width: 70px;
+      width: 48px;
 
-      &--vk, &--gmail {
-        width: 48px;
+      &--linkedin {
+        width: 70px;
       }
     }
   }

@@ -1,6 +1,7 @@
 'use strict'
 
 var gulp = require('gulp'),
+    config = require('./config'),
     runSequence = require('run-sequence').use(gulp);
 
 gulp.task('build', function(callback) {
@@ -8,11 +9,11 @@ gulp.task('build', function(callback) {
         'clean',
         'pug',
         'sass',
+        'js',
+        'img',
+        'svgSprite',
         callback);
-    gulp.src('src/js/*')
-    .pipe(gulp.dest('dist/js/'));
-    gulp.src('src/img/*')
-    .pipe(gulp.dest('dist/img/'));
-    gulp.src('src/fonts/*')
-    .pipe(gulp.dest('dist/fonts/'));
+
+    gulp.src(config.pathTo.src.fonts)
+        .pipe(gulp.dest(config.pathTo.dist.fonts));
 });
